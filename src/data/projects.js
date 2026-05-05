@@ -50,7 +50,7 @@ const rawProjects = [
     title: "Camperlab",
     url: "https://www.camperlab.com/",
     description:
-      "E-commerce e identità digitale.\nDue righe esempio: campi description e year sono opzionali.",
+      "E-commerce e identità digitale.\nDue righe esempio: campi description e year sono opzionali, credo.",
     year: 2024,
     widthClass: "media-w-1",
     cover: {
