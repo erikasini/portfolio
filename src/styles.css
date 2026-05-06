@@ -236,7 +236,7 @@ a:hover {
 }
 
 .expanded-panel {
-  width: min(84vw, 1120px);
+  width: min(100vw, 1600px);
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -291,22 +291,59 @@ a:hover {
 
 @media (max-width: 900px) {
   .site-header {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: 0.5rem;
+    row-gap: 0;
     padding: 6px 8px 8px;
   }
 
-  .header-left,
-  .header-right {
-    justify-content: flex-start;
+  /* Nome | bio o progetto | ruolo su una sola riga */
+  .header-left {
+    display: contents;
+  }
+
+  .header-name-chip {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
   }
 
   .header-center {
-    align-items: center;
-    gap: 0.25rem;
+    grid-column: 2;
+    grid-row: 1;
     justify-self: center;
     width: 100%;
-    max-width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .header-role-chip {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .header-right {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 41;
+    margin: 0;
+    padding: 6px 8px max(6px, env(safe-area-inset-bottom, 0px));
+    justify-content: space-between;
+    background: var(--bg);
+    gap: 3rem;
+  }
+
+  /* Gallery lightbox mobile: hide counter + close control */
+  .expanded-meta {
+    display: none;
   }
 
   .project-feed {
@@ -314,12 +351,28 @@ a:hover {
     padding-top: 7.5rem;
   }
 
-  .media-w-1,
+  /*.media-w-1,
   .media-w-2,
   .media-w-3 {
     width: 34vw;
     max-width: 195px;
     min-width: 116px;
+  }*/
+
+  .media-w-1 {
+    width: min(42vw, 240px);
+  }
+  
+  .media-w-2 {
+    width: min(36.5vw, 210px);
+  }
+  
+  .media-w-3 {
+    width: min(33.5vw, 180px);
+  }
+  
+  .media-w-4 {
+    width: min(50.5vw, 400px);
   }
 
   .offset-left {

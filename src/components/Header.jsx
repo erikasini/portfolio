@@ -1,14 +1,11 @@
-const BIO_PLACEHOLDER =
-  "currently at giga \n milano";
-
-function Header({ openProject }) {
+  function Header({ openProject }) {
   return (
     <header className="site-header" role="banner">
       <div className="header-left">
-        <div className="header-chip">
+        <div className="header-chip header-name-chip">
           <span className="header-name">Erika Sinigaglia</span>
         </div>
-        <div className="header-chip">
+        <div className="header-chip header-role-chip">
           <span className="header-role">web designer</span>
         </div>
       </div>
@@ -54,7 +51,7 @@ function Header({ openProject }) {
             </div>
           ) : (
             <p className="header-bio">
-              <span className="header-text-line-mark">{BIO_PLACEHOLDER}</span>
+              <span className="header-text-line-mark">currently at giga<br/>milano</span>
             </p>
           )}
         </div>
