@@ -55,15 +55,15 @@ const rawProjects = [
     widthClass: "media-w-1",
     cover: {
       type: "video",
-      src: "/media/camperlab/cover.mp4",
-      poster: "/media/camperlab/cover-poster.jpg",
+      src: "./media/camperlab/cover.mp4",
+      poster: "./media/camperlab/cover-poster.jpg",
       alt: "Camperlab cover"
     },
     gallery: [
-      { type: "video", src: "./media/camperlab/01.mp4", poster: "portfolio/media/camperlab/01-poster.jpg" },
-      { type: "video", src: "./media/camperlab/02.mp4", poster: "portfolio/media/camperlab/02-poster.jpg" },
+      { type: "video", src: "./media/camperlab/01.mp4", poster: "./media/camperlab/01-poster.jpg" },
+      { type: "video", src: "./media/camperlab/02.mp4", poster: "./media/camperlab/02-poster.jpg" },
       { type: "image", src: "./media/camperlab/03.jpg", },
-      { type: "video", src: "./media/camperlab/04.mp4", poster: "portfolio/media/camperlab/04-poster.jpg" },
+      { type: "video", src: "./media/camperlab/04.mp4", poster: "./media/camperlab/04-poster.jpg" },
       { type: "image", src: "./media/camperlab/05.jpg", },
     ]
   },
