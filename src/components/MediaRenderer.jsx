@@ -9,19 +9,25 @@ function MediaRenderer({
 }) {
   if (!media) return null;
 
+  console.log(media.src)
+
   if (media.type === "video") {
     return (
-      <video
-        className={className}
-        src={media.src}
-        muted
-        loop
-        playsInline
-        autoPlay={autoPlay}
-        preload={priority === "high" ? "auto" : "metadata"}
-        poster={media.poster || DEFAULT_VIDEO_POSTER}
-        aria-label={media.alt || "Project video"}
-      />
+      // <div style="position: relative;">
+        <video
+          className={className}
+          src={media.src}
+          muted
+          loop
+          playsInline
+          autoPlay={autoPlay}
+          preload={priority === "high" ? "auto" : "metadata"}
+          poster={media.poster || DEFAULT_VIDEO_POSTER}
+          aria-label={media.alt || "Project video"}
+          />
+          /* <img src={media.poster || DEFAULT_VIDEO_POSTER} style="position: absolute; width: 100%; height: 100%;">
+          </img> */
+      // </div>
     );
   }
 
