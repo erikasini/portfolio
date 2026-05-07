@@ -12,7 +12,10 @@ function ProjectFeed({
   onNext
 }) {
   return (
-    <section className="project-feed" aria-label="Portfolio projects">
+    <section
+      className={`project-feed${openProjectId != null ? " project-feed--gallery-open" : ""}`}
+      aria-label="Portfolio projects"
+    >
       {projects.map((project) => {
         const widthClass = project.widthClass || "media-w-2";
         const widthStyle = project.width ? { width: project.width } : undefined;

@@ -51,7 +51,7 @@
             </div>
           ) : (
             <p className="header-bio">
-              <span className="header-text-line-mark">currently at giga<br/>milano</span>
+              <span className="header-text-line-mark">currently at <a href="https://www.gigadesignstudio.com" target="_blank">giga</a><br/>milano</span>
             </p>
           )}
         </div>

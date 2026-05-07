@@ -50,8 +50,8 @@ const rawProjects = [
     title: "Camperlab",
     url: "https://www.camperlab.com/",
     description:
-      "E-commerce e identità digitale.\nDue righe esempio: campi description e year sono opzionali, credo.",
-    year: 2024,
+      "Website design and design system development for camperlab.com\n done at giga",
+    year: 2025,
     widthClass: "media-w-1",
     cover: {
       type: "video",
@@ -71,6 +71,9 @@ const rawProjects = [
     id: "loewe",
     title: "Loewe Craft Prize 2025",
     url: "https://craftprizeexhibition.loewe.com/",
+    description:
+    "Digital twin exhibition design and UX interface for Loewe Craft Prize 2025 in Madrid \n done at giga \n art direction by Valentina Cameranesi Sgroi ",
+    year: 2025,
     widthClass: "media-w-2",
     cover: {
       type: "image",
@@ -90,6 +93,9 @@ const rawProjects = [
     id: "ottolinger",
     title: "Ottolinger",
     url: "http://ottolinger.com/",
+    description:
+    "Design system and website design for ottolinger.com \n done at giga \n art direction by Kasper-Florio",
+    year: 2023,
     widthClass: "media-w-1",
     cover: {
       type: "video",
@@ -109,6 +115,9 @@ const rawProjects = [
     id: "Valentina Cameranesi Sgroi",
     title: "Valentina Cameranesi Sgroi",
     url: "https://valentinacameranesisgroi.com/",
+    description:
+    "Personal portfolio for art director Valentina Cameranesi Sgroi \n done at giga",
+    year: 2026,
     widthClass: "media-w-4",
     cover: {
       type: "image",
@@ -128,6 +137,9 @@ const rawProjects = [
     id: "cc-tapis",
     title: "cc-tapis",
     url: "https://cc-tapis.com/",
+    description:
+    "Digital identity and visual languages development + website design for rug company cc-tapis \n done at giga",
+    year: 2024,
     widthClass: "media-w-3",
     cover: {
       type: "video",
@@ -148,6 +160,9 @@ const rawProjects = [
     id: "nm3",
     title: "NM3",
     url: "https://nm3.xyz/",
+    description:
+    "Website design for nm3.com \n done at giga",
+    year: 2024,
     widthClass: "media-w-4",
     cover: {
       type: "image",
@@ -166,8 +181,8 @@ const rawProjects = [
   {
     id: "truecolor",
     title: "Truecolor",
-    description: "Progetto senza URL in elenco: titolo senza freccia ↗.",
-    year: 2023,
+    description: "Temporary website design and identity for truecolor.com \n done at giga",
+    year: 2025,
     widthClass: "media-w-3",
     cover: {
       type: "video",
@@ -184,6 +199,8 @@ const rawProjects = [
     id: "onsitestudio",
     title: "Onsitestudio",
     url: "https://onsitestudio.it/",
+    description: "Identity and website design for architecture studio onsitestudio.it\n done at giga",
+    year: 2025,
     widthClass: "media-w-4",
     cover: {
       type: "video",
@@ -203,6 +220,8 @@ const rawProjects = [
     id: "mdc",
     title: "Massimo De Carlo",
     url: "https://massimodecarlo.com/",
+    description: "Digital platform for contemporary art gallery massimodecarlo.com\n done at giga",
+    year: 2023,
     cover: {
       type: "video",
       src: "media/mdc/cover.mp4",
