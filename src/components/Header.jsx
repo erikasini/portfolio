@@ -3,7 +3,7 @@
     <header className="site-header" role="banner">
       <div className="header-left">
         <div className="header-chip header-name-chip">
-          <span className="header-name">Erika Sinigaglia</span>
+          <span className="header-name">erika sinigaglia</span>
         </div>
         <div className="header-chip header-role-chip">
           <span className="header-role">web designer</span>

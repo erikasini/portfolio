@@ -31,10 +31,11 @@ function ProjectItem({
         }}
         aria-label={`Open ${project.title} gallery`}
       >
-        <MediaRenderer media={project.cover} className="feed-media" />
-        <span className="project-feed-caption">
+                <span className="project-feed-caption">
           <span className="header-text-line-mark">{project.title}</span>
         </span>
+        <MediaRenderer media={project.cover} className="feed-media" />
+
       </button>
 
       {isOpen && expandedProject && (

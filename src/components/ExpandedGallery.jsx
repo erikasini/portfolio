@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import MediaRenderer from "./MediaRenderer";
 
-const EXIT_DURATION_MS = 540;
+const EXIT_DURATION_MS = 0;
 
 function ExpandedGallery({
   project,
@@ -103,12 +103,12 @@ function ExpandedGallery({
         style={
           isEntering
             ? {
-                transform: entryTransform || "scale(0.4)"
+                transform: entryTransform || "scale(1)"
               }
             : isExiting
               ? {
-                  transform: entryTransform || "scale(0.4)",
-                  transitionTimingFunction: "cubic-bezier(0.4, 0, 0.85, 0.25)"
+                  transform: entryTransform || "scale(1.3)",
+                  // transitionTimingFunction: "cubic-bezier(0.4, 0, 0.85, 0.25)"
                 }
             : undefined
         }
