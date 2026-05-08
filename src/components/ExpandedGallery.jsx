@@ -17,6 +17,7 @@ function ExpandedGallery({
   const [isEntering, setIsEntering] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
   const [entryTransform, setEntryTransform] = useState("");
+  const [pointerSide, setPointerSide] = useState("right");
   const currentMedia = project.gallery[currentIndex];
 
   useLayoutEffect(() => {
@@ -63,7 +64,13 @@ function ExpandedGallery({
 
   useEffect(() => {
     function onKeyDown(event) {
-      if (event.key === "Escape") requestClose();
+      if (event.key === "Escape") {
+        event.preventDefault();
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.blur();
+        }
+        requestClose();
+      }
       if (event.key === "ArrowLeft") onPrevious();
       if (event.key === "ArrowRight") onNext();
     }
@@ -80,6 +87,12 @@ function ExpandedGallery({
   
     if (isLeft) onPrevious();
     else onNext();
+  }
+
+  function onPanelPointerMove(event) {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const isLeft = event.clientX - bounds.left < bounds.width / 2;
+    setPointerSide(isLeft ? "left" : "right");
   }
 
   function requestClose() {
@@ -100,7 +113,7 @@ function ExpandedGallery({
     >
       <div
         ref={mediaFrameRef}
-        className="expanded-media-hitarea"
+        className={`expanded-media-hitarea expanded-media-hitarea--${pointerSide}`}
         style={
           isEntering
             ? {
@@ -114,6 +127,8 @@ function ExpandedGallery({
             : undefined
         }
         onClick={onPanelClick}
+        onPointerMove={onPanelPointerMove}
+        onPointerEnter={onPanelPointerMove}
         role="button"
         tabIndex={0}
         aria-label="Navigate gallery"

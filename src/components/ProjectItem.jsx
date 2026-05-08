@@ -34,7 +34,10 @@ function ProjectItem({
                 <span className="project-feed-caption">
           <span className="header-text-line-mark">{project.title}</span>
         </span>
+        <div className="feed-media-container">
         <MediaRenderer media={project.cover} className="feed-media" />
+
+        </div>
 
       </button>
 
